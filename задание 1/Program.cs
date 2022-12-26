@@ -6,3 +6,14 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+
+Console.Clear();
+Console.Write("Введите элементы массива через пробел: ");
+string elements = Console.ReadLine();
+string[] list = elements.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+Console.WriteLine($"Исходный массив строк [{String.Join(", ", list)}]");
+string[] newlist = GetRandomArrayFromString(list);
+ArrayNonRecurringString(newlist, list);
+Console.WriteLine($"Полученный массив строк [{String.Join(", ", newlist)}]");
+
