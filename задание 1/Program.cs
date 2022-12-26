@@ -14,7 +14,6 @@ string elements = Console.ReadLine();
 string[] list = elements.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 Console.WriteLine($"Исходный массив строк [{String.Join(", ", list)}]");
 string[] newlist = GetRandomArrayFromString(list);
-ArrayNonRecurringString(newlist, list);
 Console.WriteLine($"Полученный массив строк [{String.Join(", ", newlist)}]");
 
 
@@ -27,24 +26,4 @@ for (int i = 0; i < array.Length; i++)
 array[i] = stringArray[new Random().Next(0, stringArray.Length)]; 
 }
 return array;
-}
-
-
-void ArrayNonRecurringString(string[] text, string[]stringArray)
-{
-    for (int i = 0; i < text.Length-1; i++)
-    {
-         for (int index=i+1; index < text.Length; index++)
-         {   
-            if (text[i] == text[index])
-            {
-                text[i] = stringArray[new Random().Next(0, stringArray.Length)];
-                string k = text[0];
-                text [0] = text[i];
-                text [i] = k;
-
-            }
-            
-         }   
-    }
 }
