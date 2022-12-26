@@ -28,3 +28,23 @@ array[i] = stringArray[new Random().Next(0, stringArray.Length)];
 }
 return array;
 }
+
+
+void ArrayNonRecurringString(string[] text, string[]stringArray)
+{
+    for (int i = 0; i < text.Length-1; i++)
+    {
+         for (int index=i+1; index < text.Length; index++)
+         {   
+            if (text[i] == text[index])
+            {
+                text[i] = stringArray[new Random().Next(0, stringArray.Length)];
+                string k = text[0];
+                text [0] = text[i];
+                text [i] = k;
+
+            }
+            
+         }   
+    }
+}
