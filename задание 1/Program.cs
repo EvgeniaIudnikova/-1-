@@ -20,10 +20,10 @@ Console.WriteLine($"Полученный массив строк [{String.Join("
 // функция создания массива строк, путем рандомного выбора элементов из имеющегося массива
 string[] GetRandomArrayFromString(string[] stringArray)
 {
-string[] array = new string[stringArray.Length-1];
-for (int i = 0; i < array.Length; i++)
-{
-array[i] = stringArray[new Random().Next(0, stringArray.Length)]; 
-}
-return array;
+    string[] array = new string[stringArray.Length-1];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = stringArray[new Random().Next(0, stringArray.Length)]; 
+    }
+    return array;
 }
